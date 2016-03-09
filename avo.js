@@ -1,35 +1,36 @@
 function avocados(avaocadosString){
   	var avo = avaocadosString
-  		.split(",");
-  	
+  		.split(", ");
+  	 
+	var avoList = [];
 
-
-  	var avoList = [];
-  	for (var i = 0; i < avo.length; i++) {
+   	for (var i = 0; i < avo.length; i++) {
   		var avoString = avo[i];
-  			//.replace("for", "");
 
-  		console.log(avoString);
+  		var item = avoString
+        .split(" for");
 
-  		var quantity = avoString[i]
-  		
-  		var item = quantity.split(" ");
-
-        var quantityName = item[0];
+      // var quantity = avoString.split("for")[0];
+      // var price = avoString.split("for")[1];
+        var quantity = item[0];
         if (parseInt(item[0])){
-            quantityName = item[0] + " " + item[1];
+            quantity = Number(item[0]);
         }
-        var price = item[item.length];
 
-  
 
-        avoList.push({
-        	quantity : quantity,
-            price : price
-        })
+      var number = item[1]
+        .split("R")
+        .slice(" ");
+
+      var price = Number(number[1]);    
+
+      avoList.push({
+        quantity : quantity,
+        price : price
+      })
 
   	};
-
+      
   	return avoList;	
 }
 
