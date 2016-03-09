@@ -12,10 +12,9 @@ function avocados(avaocadosString){
 
       // var quantity = avoString.split("for")[0];
       // var price = avoString.split("for")[1];
-        var quantity = item[0];
-        if (parseInt(item[0])){
-            quantity = Number(item[0]);
-        }
+        
+        var quantity = Number(item[0]);
+      
 
 
       var number = item[1]
@@ -36,5 +35,19 @@ function avocados(avaocadosString){
 
 
 
+function pricePerAvo(price){
+  var math = price
+
+  var mathList = [];
+    for (var i = 0; i < price.length; i++) {
+      var prices = price[i]
+
+console.log(math);
+
+    mathList.push();
+    };
+
+   return math;
+}
 
     
